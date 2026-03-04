@@ -1,9 +1,15 @@
 import { useState } from 'react'
+import type { Dispatch, FormEvent, SetStateAction } from 'react'
 
-const InputComponent = ({ taskList, setTaskList }) => {
+type Props = {
+  taskList: string[]
+  setTaskList: Dispatch<SetStateAction<string[]>>
+}
+
+const InputComponent = ({ taskList, setTaskList }: Props) => {
   const [input, setInput] = useState('')
 
-  const handleAddTask =(e) => {
+  const handleAddTask =(e: FormEvent<HTMLButtonElement>) => {
      e.preventDefault()
      setTaskList([...taskList, input]);
      setInput("");
