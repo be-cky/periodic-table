@@ -1,5 +1,4 @@
 import { Route, Routes } from 'react-router-dom'
-import Stopwatch from './pages/Stopwatch'
 import PeriodicTable from './pages/PeriodicTable'
 
 function App() {
@@ -7,7 +6,6 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<PeriodicTable/>} />
-        <Route path="/stopwatch" element={<Stopwatch />} />
         <Route path="/periodic-table" element={<PeriodicTable />} />
       </Routes>
 
